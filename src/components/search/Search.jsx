@@ -16,25 +16,29 @@ const Search = styled('div')(({ theme }) => ({
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
+  
   marginLeft: 0,
-  width: '30%',
-  // [theme.breakpoints.up('sm')]: {
-  //   marginLeft: theme.spacing(1),
-  //   width: 'auto',
-  // },
-  border:'1px solid #000',
-  borderRadius:20,
+  width: '100%',
+  height:'30px',
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(1),
+    width: 'auto',
+  },
+  border:'none',
+  boxShadow:'3',
+
+
 }));
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
+// const SearchIconWrapper = styled('div')(({ theme }) => ({
+//   padding: theme.spacing(0, 2),
+//   height: '100%',
+//   position: 'absolute',
+//   pointerEvents: 'none',
+//   display: 'flex',
+//   alignItems: 'center',
+//   justifyContent: 'center',
+// }));
 
 const theme=createTheme({
   palette:{
@@ -84,9 +88,9 @@ export default function SearchBar() {
             Library Management System
           </Typography>
           <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
+            {/* <SearchIconWrapper> */}
+              {/* <SearchIcon /> */}
+            {/* </SearchIconWrapper> */}
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
