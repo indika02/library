@@ -1,13 +1,18 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import Search from '../../components/filter/Search';
+import Book from '../../components/books/Book';
+import Container from 'react-bootstrap/esm/Container';
+import './home.css';
 
 const Home = () => {
   return (
-    <div>
+    <Container>
+    <div className='homeContainer'>
       <Header/>
-      <Search/>
+      <Book/>
     </div>
+    </Container>
   );
 }
 
